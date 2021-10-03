@@ -34,8 +34,9 @@
   * Howdoi
 
 
-
-
+TODO:
+  * Openshift, 
+  * cuDNN Library for Linux 
 
 ## Installation
 ```bash
