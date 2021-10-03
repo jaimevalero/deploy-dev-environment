@@ -3,19 +3,18 @@
   become: true
   gather_facts: Yes
 
-  tasks:
-  - include_role:
-    name: install-defaults
-
-
-  # Install Skype, VSCode and Anaconda
   roles:
+    # Install Skype
     - name: mhalano.skypeforlinux   
 
+    # Install Anaconda
     - name: andrewrothstein.anaconda
 
+    # Install Vstudio Code
     - name: gantsign.visual-studio-code
       username: "{{USER}}"
       visual_studio_code_mirror: "https://packages.microsoft.com"
       visual_studio_code_extensions: "{{vscode_extensions}}"
 
+    # Everything else
+    - name: install-defaults
