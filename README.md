@@ -14,7 +14,10 @@
     Conda, YARN, NPM
 
 * Languages    
-    GO, Python, Node, Developer Tools (C, Make)
+  * GO, 
+  * Python
+  * Node
+  * Developer Tools (C, Make)
 
 * VPN:
   * AnyConnect with autoconnect
