@@ -1,4 +1,5 @@
-# Defaults installs for getting dev environment
+# Ansible role for prepare my dev environment
+
 
 ## App Installed:
 * Skype, Teams.
