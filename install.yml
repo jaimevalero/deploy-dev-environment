@@ -8,7 +8,7 @@
     name: install-defaults
 
 
-
+  # Install Skype, VSCode and Anaconda
   roles:
     - name: mhalano.skypeforlinux   
 
