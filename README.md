@@ -2,7 +2,10 @@
 
 
 ## App Installed:
-* Skype, Teams.
+
+* Messenger app
+  * Skype 
+  * Teams
 
 * VSCode
 
