@@ -7,7 +7,8 @@
   * Skype 
   * Teams
 
-* VSCode
+* GUI 
+  * VSCode
 
 * Docker 
   * Docker community Edition  
@@ -15,7 +16,9 @@
   * Containerd
 
 * Package Managers
-    Conda, YARN, NPM
+  * Conda
+  * YARN
+  * NPM
 
 * Languages    
   * GO, 
