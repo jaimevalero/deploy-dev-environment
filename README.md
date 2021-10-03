@@ -6,13 +6,18 @@
 * VSCode
 
 * Docker 
-    Compose, Container
+  * Docker community Edition  
+  * Compose
+  * Containerd
 
 * Package Managers
-    Conda, YARN
+    Conda, YARN, NPM
 
 * Languages    
-    GO, Python, NPM, Developer Tools (C, Make)
+    GO, Python, Node, Developer Tools (C, Make)
+
+* VPN:
+  * AnyConnect with autoconnect
 
 * Other :   
   * Wifi Drivers
@@ -21,8 +26,7 @@
   * Hugo
   * Howdoi
 
-* VPN:
-  * AnyConnect with autoconnect
+
 
 
 
