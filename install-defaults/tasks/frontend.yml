@@ -1,0 +1,24 @@
+---
+    - name: Add the gpg key for yarn
+      apt_key:
+        url: "https://dl.yarnpkg.com/debian/pubkey.gpg"
+        state: present   
+      tags: [ packages, keys ]
+
+    - name: Add the yarn repo
+      apt_repository:
+        repo: "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main"
+        state: present
+        update_cache: yes
+      tags: [ packages ]
+
+    - name: Install the yarn
+      apt:
+        name: yarn
+        state: present   
+      tags: [ packages ]     
+
+    - name: install node 
+      shell: |
+        curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - && sudo apt-get install -y nodejs
+      tags: [ packages ]

@@ -10,7 +10,6 @@ packages: [ "tilix" ,"vim" , "build-essential" , "libelf-dev",
 "nvidia-driver-460", "glmark2",
 "libgl1-mesa-glx", "libegl1-mesa", "libxrandr2", "libxrandr2", "libxss1", "libxcursor1", 
 "libxcomposite1", "libasound2", "libxi6", "libxtst6", "sublime-text", "steam",
-"docker-ce", "docker-ce-cli", "containerd.io", "pigz",
 "firefox"
 ]
 

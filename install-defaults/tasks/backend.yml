@@ -1,0 +1,8 @@
+---
+    - name: install go
+      apt:
+        state: present
+        name:
+         - golang-go  
+         - hugo 
+      tags: [ packages ]

@@ -1,0 +1,36 @@
+---
+
+    - name: Add the gpg key for docker
+      apt_key:
+        url: "https://download.docker.com/linux/ubuntu/gpg"
+        state: present   
+      tags: [ packages, keys ]
+      
+    - name: Add the docker repo
+      apt_repository:
+        repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+        state: present
+        update_cache: yes
+      tags: [ packages ]
+
+
+    - name: Install docker-compose
+      remote_user: "{{USER}}"
+      get_url: 
+        url : https://github.com/docker/compose/releases/download/{{docker_compose_version}}/docker-compose-Linux-x86_64
+        dest: /usr/local/bin/docker-compose
+        mode: 'u+x,g+x'
+
+
+    - name: configure docker group
+      user:
+        name: "{{USER}}"
+        groups: "sudo,adm,jaimevalero,docker"
+        append: yes
+      
+
+    - name: Install docker  packages
+      apt: name={{ item }}
+          state=latest
+      with_items: [ "docker-ce", "docker-ce-cli", "containerd.io", "pigz"]
+      tags: [ packages ]
