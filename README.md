@@ -34,7 +34,7 @@
   * Howdoi
 
 
-TODO:
+* TODO:
   * Openshift, 
   * cuDNN Library for Linux 
 
