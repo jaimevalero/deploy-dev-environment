@@ -1,15 +1,13 @@
-
 # Defaults installs for getting dev environment
 
 
-
-
-
 ## Installation
-ansible-galaxy install -r requirements.yml
-ansible-playbook install-defaults.yaml 
-ansible-playbook install-roles.yaml  
+ansible-playbook install.yml --tags crons
 
 
 ### Debugging
-ansible-playbook install-defaults.yaml  --skip-tags "packages"
+
+ansible-playbook install.yml --skip-tags "packages"
+
+ansible-playbook install.yml -tags crons
+

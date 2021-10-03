@@ -1,0 +1,21 @@
+--- 
+- hosts: localhost
+  become: true
+  gather_facts: Yes
+
+  tasks:
+  - include_role:
+    name: install-defaults
+
+
+
+  roles:
+    - name: mhalano.skypeforlinux   
+
+    - name: andrewrothstein.anaconda
+
+    - name: gantsign.visual-studio-code
+      username: "{{USER}}"
+      visual_studio_code_mirror: "https://packages.microsoft.com"
+      visual_studio_code_extensions: "{{vscode_extensions}}"
+
