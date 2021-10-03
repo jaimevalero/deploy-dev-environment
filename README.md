@@ -5,7 +5,7 @@
 ```bash
 ansible-galaxy install -r requirements.yml
 
-ansible-playbook install.yml --tags crons
+ansible-playbook install.yml 
 ```
 
 
