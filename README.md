@@ -74,9 +74,12 @@ docker run -it  -v $PWD:/applinuxmintd/mint19.1-amd64 bash
 and then
 ```bash
 
-apt-get install ansible  --fix-missing -y
+
 cd /app
-ansible-playbook install.yml 
+ansible-playbook pre-works.yml
+/usr/local/bin/ansible-galaxy  install -r requirements.yml
+/usr/local/bin/ansible-playbook install.yml 
+
 
 
 ```
