@@ -4,6 +4,7 @@
       loop:
         - basic_installation.yml
         - customizations.yml
+        - ms-teams.yml
         - crons.yml
         - frontend.yml
         - backend.yml

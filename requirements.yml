@@ -2,12 +2,12 @@
 roles:
 
 - name : andrewrothstein.anaconda
-  version: latest
 
 - name : gantsign.visual-studio-code
-  version: latest
-  username: jaimevalero
 
 - name : mhalano.skypeforlinux    
 
 
+- name : andrewrothstein.alpine-glibc-shim
+- name : andrewrothstein.bash
+- name : andrewrothstein.unarchive-deps

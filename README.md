@@ -43,9 +43,18 @@
 
 ## Installation
 ```bash
-ansible-galaxy install -r requirements.yml
 
-ansible-playbook install.yml 
+# First install python3 to have ansible collections (ansible v2.9 or above)
+
+ansible-playbook pre-works.yml 
+
+
+#ansible-galaxy install -r requirements.yml
+
+/usr/local/bin/ansible-galaxy  install -r requirements.yml
+
+/usr/local/bin/ansible-playbook install.yml 
+
 ```
 
 
@@ -56,3 +65,18 @@ ansible-playbook install.yml --skip-tags "packages"
 ansible-playbook install.yml -tags crons
 ```
 
+from inside a container
+```bash
+
+docker run -it  -v $PWD:/applinuxmintd/mint19.1-amd64 bash
+
+```
+and then
+```bash
+
+apt-get install ansible  --fix-missing -y
+cd /app
+ansible-playbook install.yml 
+
+
+```

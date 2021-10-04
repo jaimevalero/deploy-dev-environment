@@ -1,0 +1,20 @@
+---
+    # Install Microsoft Teams
+    - name: Add the gpg key  Microsoft Teams 
+      apt_key:
+        url: "https://packages.microsoft.com/keys/microsoft.asc"
+        state: present   
+      tags: [ packages, keys ]
+
+    - name: Add Microsoft Teams repository
+      apt_repository:
+        repo: "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main"
+        state: present
+        update_cache: yes
+
+      tags: [ packages ]
+    - name: Install teams
+      apt: name={{ item }}
+          state=latest
+      with_items: "teams"
+      tags: [ packages ]

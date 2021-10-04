@@ -9,7 +9,7 @@ packages: [ "tilix" ,"vim" , "build-essential" , "libelf-dev",
 ,"ldap-utils" ,"autoconf" ,"libtool" ,"ansible" ,
 "nvidia-driver-460", "glmark2",
 "libgl1-mesa-glx", "libegl1-mesa", "libxrandr2", "libxrandr2", "libxss1", "libxcursor1", 
-"libxcomposite1", "libasound2", "libxi6", "libxtst6", "sublime-text", "steam",
+"libxcomposite1", "libasound2", "libxi6", "libxtst6", "sublime-text", 
 "firefox"
 ]
 

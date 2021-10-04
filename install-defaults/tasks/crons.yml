@@ -1,5 +1,6 @@
 ---
     - name: Creates VPN cronjob
+      ignore_errors: yes
       cron:
         name: Connect VPN
         user: root
@@ -11,6 +12,7 @@
         - crons
 
     - name: Creates shutdown cronjob
+      ignore_errors: yes
       cron:
         name: Shutdown.
         user: root

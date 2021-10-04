@@ -5,8 +5,14 @@
         state: directory
         owner: "{{USER}}"
         group: "{{USER}}"
+
+    - name: Add the user 
+      ansible.builtin.user:
+        shell: /bin/bash
+        name: "{{USER}}"
+        append: yes
         
-    - name: Add {{USER}} user
+    - name: Add {{USER}} user to sudoers
       shell: |
         echo "{{USER}}     ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/{{USER}}
 

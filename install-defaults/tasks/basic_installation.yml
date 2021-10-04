@@ -1,8 +1,14 @@
+---
     - name: Run a shell command and register its output as a variable
-      ansible.builtin.shell: "uname -r"
+      ansible.builtin.shell: "uname -r "
       register: os_version
       ignore_errors: true
 
+
+    - name: install default SO headers
+      shell: |
+        """apt-get install linux-headers-{{os_version['stdout_lines'][0]}}"""
+      ignore_errors: yes
 
 
 
@@ -13,12 +19,6 @@
       with_items: "{{ packages}}"
       tags: [ packages ]
 
-  
-    - name: install default SO headers
-      apt:
-        state: present
-        name:
-         - "linux-headers-{{os_version['stdout_lines'][0]}}"
 
 
     - name: reinstall libc6
