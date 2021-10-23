@@ -38,6 +38,7 @@
           alias inv=" cd /home/jaimevalero/git/epg-airflow/ ;  conda activate epg-airflow ;docker-compose -f docker-compose.dev.yaml up -d"
           alias build=" cd /home/jaimevalero/git/epg-airflow/ ;  conda activate epg-airflow ; docker-compose -f docker-compose.dev.yaml build"
           alias h='function hdi(){ howdoi $* -c -n 5; }; hdi'
+          alias con='ps -ef | grep ssh | grep -e 9999 -e 8123 | grep -v grep | awk '\''{print $2}'\'' | xargs kill -9 ; ssh -f -N -L 9999:127.0.0.1:9000 epg@epg-clhouse  ;  ssh -f -N -L 8123:127.0.0.1:8123 epg@epg-clhouse  ; ps -ef | grep ssh | grep -e 9999 -e 8123 | grep -v grep'
         marker: '# {mark} ANSIBLE MANAGED BLOCK '
         insertbefore: BOF
         create: yes 
