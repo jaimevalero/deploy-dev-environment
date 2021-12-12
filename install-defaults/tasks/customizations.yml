@@ -28,6 +28,7 @@
           export PATH=$PATH:$HOME 
           export HISTSIZE=10000                 
           alias conf='ssh -t  -l epg  prod-epg-conf-01 n  " sudo /bin/bash"'
+          alias con='ps -ef | grep ssh | grep -e 9999 -e 8123 | grep -v grep | awk '\''{print $2}'\'' | xargs kill -9 ; ssh -f -N -L 9999:127.0.0.1:9000 epg@epg-clhouse  ;  ssh -f -N -L 8123:127.0.0.1:8123 epg@epg-clhouse  ; ps -ef | grep ssh | grep -e 9999 -e 8123 | grep -v grep'
           alias ir='      ssh -l epg'
           alias ci='      ssh -t  -l epg ci-epg-vmwar-01    " sudo /bin/bash"'
           alias grafana=' ssh -t  -l epg grafana            " sudo /bin/bash"'
