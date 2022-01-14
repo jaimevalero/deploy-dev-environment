@@ -15,12 +15,12 @@
       with_items: "{{ packages}}"
       tags: [ packages ]
 
-    - name: reinstall libc6
+    - name: Reinstall libc6
       shell: |
         apt-get install --reinstall libc6-i386
       tags: [ packages ]
 
-    - name: Install teams
+    - name: Install microsoft teams
       apt:
         name: teams
         state: present   
