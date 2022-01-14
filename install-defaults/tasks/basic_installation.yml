@@ -4,22 +4,16 @@
       register: os_version
       ignore_errors: true
 
-
     - name: install default SO headers
       shell: |
         """apt-get install linux-headers-{{os_version['stdout_lines'][0]}}"""
       ignore_errors: yes
-
-
-
 
     - name: Install basic packages
       apt: name={{ item }}
           state=latest
       with_items: "{{ packages}}"
       tags: [ packages ]
-
-
 
     - name: reinstall libc6
       shell: |
@@ -31,4 +25,3 @@
         name: teams
         state: present   
       tags: [ packages ]       
-
