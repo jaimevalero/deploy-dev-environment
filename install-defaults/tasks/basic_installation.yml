@@ -4,14 +4,10 @@
       register: os_version
       ignore_errors: true
 
-
     - name: install default SO headers
       shell: |
         """apt-get install linux-headers-{{os_version['stdout_lines'][0]}}"""
       ignore_errors: yes
-
-
-
 
     - name: Install basic packages
       apt: name={{ item }}
@@ -19,14 +15,12 @@
       with_items: "{{ packages}}"
       tags: [ packages ]
 
-
-
-    - name: reinstall libc6
+    - name: Reinstall libc6
       shell: |
         apt-get install --reinstall libc6-i386
       tags: [ packages ]
 
-    - name: Install teams
+    - name: Install microsoft teams
       apt:
         name: teams
         state: present   
