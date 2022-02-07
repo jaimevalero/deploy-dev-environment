@@ -6,7 +6,7 @@ docker_compose_version: 1.29.2
 
 packages: [ "tilix" ,"vim" , "build-essential" , "libelf-dev",
 "git", "dkms" ,"htop" ,"openconnect" ,"gparted" ,"jq" ,"nmap" ,"mysql-client" ,"traceroute" 
-,"ldap-utils" ,"autoconf" ,"libtool" ,"ansible" ,
+,"ldap-utils" ,"autoconf" ,"libtool" ,"ansible" ,  "awscli"
 "nvidia-driver-460", "glmark2",
 "libgl1-mesa-glx", "libegl1-mesa", "libxrandr2", "libxrandr2", "libxss1", "libxcursor1", 
 "libxcomposite1", "libasound2", "libxi6", "libxtst6", "sublime-text", 

@@ -9,5 +9,6 @@
         - frontend.yml
         - backend.yml
         - docker.yml
+        - terraform.yml
         - network_drivers.yml
       

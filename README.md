@@ -20,6 +20,10 @@
   * YARN
   * NPM
 
+* Cloud
+  * Aws-cli
+  * Terraform 
+
 * Languages    
   * GO, 
   * Python
