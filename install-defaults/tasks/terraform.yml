@@ -1,0 +1,21 @@
+---
+
+    - name: Add the gpg key for terraform
+      apt_key:
+        url: "https://apt.releases.hashicorp.com/gpg"
+        state: present   
+      tags: [ packages, keys ]
+      
+    - name: Add the terraform repo (from ubuntu, because executable is statically linked)
+      apt_repository:
+        repo:  "deb [arch=amd64] https://apt.releases.hashicorp.com groovy main"
+        state: present
+        update_cache: yes
+      tags: [ packages ]
+      
+
+    - name: Install terraform  packages
+      apt: name={{ item }}
+          state=latest
+      with_items: [ "terraform"]
+      tags: [ packages ]
