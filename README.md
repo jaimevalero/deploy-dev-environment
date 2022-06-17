@@ -48,6 +48,8 @@
 ## Installation
 ```bash
 
+# Prereqs ansible, git
+sudo apt install -y ansible git 
 # First install python3 to have ansible collections (ansible v2.9 or above)
 
 ansible-playbook pre-works.yml 
