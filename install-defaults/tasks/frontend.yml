@@ -9,7 +9,7 @@
       apt_repository:
         repo: "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main"
         state: present
-        update_cache: yes
+        update_cache: no
       tags: [ packages ]
 
     - name: Install the yarn
@@ -18,10 +18,12 @@
         state: present   
       tags: [ packages ]     
 
-    - name: install node 
+      #    - name: install node 
+      #shell: |
+      #  curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt-get install -y nodejs
+      #tags: [ packages ]
+
+    - name: sign debian repo
       shell: |
-        curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - && sudo apt-get install -y nodejs
-      tags: [ packages ]
-
-
+         curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 # TO-DO Install Postman from https://dl-agent.pstmn.io/download/latest/linux

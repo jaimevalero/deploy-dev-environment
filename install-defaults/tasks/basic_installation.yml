@@ -1,6 +1,7 @@
 ---
+
     - name: Run a shell command and register its output as a variable
-      ansible.builtin.shell: "uname -r "
+      command: "uname -r "
       register: os_version
       ignore_errors: true
 
@@ -20,14 +21,4 @@
         apt-get install --reinstall libc6-i386
       tags: [ packages ]
 
-    - name: Install microsoft teams
-      apt:
-        name: teams
-        state: present   
-      tags: [ packages ]       
-
-    - name: Install Joplin, a taking notes app
-      shell: |
-        wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash        
-      tags: [ packages ]
 

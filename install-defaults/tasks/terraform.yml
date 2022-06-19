@@ -10,12 +10,12 @@
       apt_repository:
         repo:  "deb [arch=amd64] https://apt.releases.hashicorp.com groovy main"
         state: present
-        update_cache: yes
+        update_cache: no
       tags: [ packages ]
       
 
-    - name: Install terraform  packages
-      apt: name={{ item }}
-          state=latest
-      with_items: [ "terraform"]
-      tags: [ packages ]
+      #    - name: Install terraform  packages
+      #apt: name={{ item }}
+      #    state=latest
+      #with_items: [ "terraform"]
+      #tags: [ packages ]

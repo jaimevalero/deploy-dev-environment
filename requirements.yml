@@ -7,7 +7,7 @@ roles:
 
 - name : mhalano.skypeforlinux    
 
-
+- name : ngetchell.ms_teams
 - name : andrewrothstein.alpine-glibc-shim
 - name : andrewrothstein.bash
 - name : andrewrothstein.unarchive-deps

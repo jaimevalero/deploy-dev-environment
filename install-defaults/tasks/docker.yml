@@ -10,9 +10,14 @@
       apt_repository:
         repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
         state: present
-        update_cache: yes
+        update_cache: no
       tags: [ packages ]
 
+    - name: Install docker  packages
+      apt: name={{ item }}
+          state=latest
+      with_items: [ "docker-ce", "docker-ce-cli", "containerd.io", "pigz"]
+      tags: [ packages ]
 
     - name: Install docker-compose
       remote_user: "{{USER}}"
@@ -29,8 +34,3 @@
         append: yes
       
 
-    - name: Install docker  packages
-      apt: name={{ item }}
-          state=latest
-      with_items: [ "docker-ce", "docker-ce-cli", "containerd.io", "pigz"]
-      tags: [ packages ]

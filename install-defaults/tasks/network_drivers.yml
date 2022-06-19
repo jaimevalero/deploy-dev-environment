@@ -1,13 +1,13 @@
 ---
 
-    - name: download network drivers
-      git: 
-        dest: /opt/rtl8812au
-        repo: https://github.com/aircrack-ng/rtl8812au.git
-      tags: [  network ]
+#    - name: download network drivers
+#      git: 
+#        dest: /opt/rtl8812au
+#        repo: https://github.com/aircrack-ng/rtl8812au.git
+#      tags: [  network ]
 
-    - name: configure network drivers
-      shell: |
-        cd /opt/rtl8812au
-        make && make install
-      tags: [  network ]
+#    - name: configure network drivers
+#      shell: |
+#        cd /opt/rtl8812au
+#        make && make install
+#      tags: [  network ]

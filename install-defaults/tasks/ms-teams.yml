@@ -10,7 +10,7 @@
       apt_repository:
         repo: "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main"
         state: present
-        update_cache: yes
+        update_cache: no
 
       tags: [ packages ]
     - name: Install teams

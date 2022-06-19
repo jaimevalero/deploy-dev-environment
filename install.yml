@@ -11,7 +11,7 @@
     - name: install-defaults
 
     # Install Skype
-    - name: mhalano.skypeforlinux   
+    #- name: mhalano.skypeforlinux   
 
     # Install Anaconda
     - name: andrewrothstein.anaconda
